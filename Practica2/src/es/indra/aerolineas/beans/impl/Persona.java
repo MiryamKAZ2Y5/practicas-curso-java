@@ -1,17 +1,17 @@
 /**
  * 
  */
-package es.indra.aerolineas.beans;
+package es.indra.aerolineas.beans.impl;
 
 /**
- * @author aula4
+ * @author miryam
  *
  */
-public class Persona {
-	private int id;
+public abstract class Persona {
+	protected int id;
 	protected String nombre;
-	private String apellido;
-	private String dni;
+	protected String apellido;
+	protected String dni;
 	
 	public int getId() {
 		return id;
@@ -49,6 +49,8 @@ public class Persona {
 	public void setDni(String dni) {
 		this.dni = dni;
 	}
+	
+	public abstract String solicitarInformacion();
 
 
 }

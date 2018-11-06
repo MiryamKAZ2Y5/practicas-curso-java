@@ -1,14 +1,16 @@
 /**
  * 
  */
-package es.indra.aerolineas.beans;
+package es.indra.aerolineas.beans.impl;
+
+import es.indra.aerolineas.beans.IAerolinea;
 
 /**
- * @author josejarizav
+ * @author miryam
  *
  *
  */
-public class Aerolinea {
+public class Aerolinea implements IAerolinea{
 	
 	private int id;
 	private String nombre;
@@ -85,6 +87,7 @@ public class Aerolinea {
 	public void anularVuelos(String... vuelos) {
 		System.out.println("Numero de vuelos a anular: "+ vuelos.length);
 	}
+
 	
 	
 	

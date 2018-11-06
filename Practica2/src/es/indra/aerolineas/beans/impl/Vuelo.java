@@ -1,10 +1,10 @@
 /**
  * 
  */
-package es.indra.aerolineas.beans;
+package es.indra.aerolineas.beans.impl;
 
 /**
- * @author josejarizav
+ * @author miryam
  *
  *
  */
