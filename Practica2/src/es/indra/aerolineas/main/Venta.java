@@ -56,6 +56,8 @@ public class Venta {
 		System.out.println("*************************************************************************");
 		
 		
+		aa.consultarVuelos();
+		
 		
 
 	}

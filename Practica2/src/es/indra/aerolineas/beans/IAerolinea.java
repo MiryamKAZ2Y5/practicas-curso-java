@@ -14,6 +14,7 @@ public interface IAerolinea {
 	
 	public Vuelo[] consultarVuelos(String origen);
 	public Vuelo[] consultarVuelos(String origen, String destino);
+	public void consultarVuelos();
 	public void anularVuelos(String... vuelos);
 	 String getNombre();
 	 Vuelo[] getVuelos();
