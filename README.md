@@ -1,4 +1,16 @@
-# Prueba Sintaxis Markdown
+# Estructura del Proyecto Aerolinea
 
-## Prueba
-Prueba 1
+## Paquetes y clases
+El paquete raíz  es es.indra.aerolinea
+### .beans
+*Interfaces*
+*IAerolinea: Interfaz que define el comportamiento de la gestión de vuelos.
+### .beans.impl
+*Clases*
+*Aerolinea: Implementación de la interfaz IAerolinea:
+
+ +Variables
+ *Nombre
+ 
+  
+
