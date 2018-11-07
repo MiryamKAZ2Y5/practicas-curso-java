@@ -4,7 +4,7 @@
 package es.indra.aerolineas.exceptions;
 
 /**
- * @author aula6
+ * @author miryam
  *
  */
 public class ErrorLecturaVuelosException extends Exception {

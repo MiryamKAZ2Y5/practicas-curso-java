@@ -23,7 +23,7 @@ public class ReadFile {
 		try {
 			contenido = Files.readAllLines(path);
 		}catch(IOException e){
-			ErrorLecturaVuelosException ex = new ErrorLecturaVuelosException("Error en la lectura del archivo");
+			ErrorLecturaVuelosException ex = new ErrorLecturaVuelosException("Error en la lectura del archivo", e);
 			throw ex;
 		}
 		return contenido;
