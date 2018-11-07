@@ -7,7 +7,10 @@ public class MetodosEntrada {
 	
 	public static void main(String[] args) {
 		String mensaje;
-		Scanner sc = new Scanner();
+		System.out.println("Introduce algo");
+		Scanner sc = new Scanner(System.in);
+		mensaje=sc.nextLine();
+		System.out.println(mensaje);
 
 	}
 
