@@ -4,7 +4,9 @@
 package es.indra.aerolineas.beans.impl;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import es.indra.aerolineas.beans.IAerolinea;
 import es.indra.aerolineas.exceptions.ErrorLecturaVuelosException;
@@ -20,6 +22,7 @@ public class Aerolinea implements IAerolinea{
 	private int id;
 	private String nombre;
 	private Vuelo[] vuelos = new Vuelo[10];
+	private Map<Integer,Billete>billetes=new HashMap<>();
 	
 	public Aerolinea() {		
 	}
@@ -61,6 +64,14 @@ public class Aerolinea implements IAerolinea{
 	}
 	
 	
+	public Map<Integer, Billete> getBilletes() {
+		return billetes;
+	}
+
+	public void setBilletes(Map<Integer, Billete> billetes) {
+		this.billetes = billetes;
+	}
+
 	public Vuelo[] consultarVuelos(String origen) {
 	 Vuelo[] vuelosConsultados = new Vuelo[10];
 	 int j=0;
@@ -107,6 +118,14 @@ public class Aerolinea implements IAerolinea{
 	}
 	public void anularVuelos(String... vuelos) {
 		System.out.println("Numero de vuelos a anular: "+ vuelos.length);
+	}
+	public void verBilletesPorFecha(String fecha) {
+		for(Map.Entry<Integer, Billete> elemento: billetes.entrySet()) {
+			if(elemento.getValue().fecha.equals(fecha)) {
+				System.out.println("Billete: "+elemento.getKey());
+				System.out.println("Billete: "+elemento.getValue().toString());
+			}
+		}
 	}
 
 	

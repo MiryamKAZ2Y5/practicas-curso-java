@@ -4,6 +4,7 @@
 package es.indra.aerolineas.main;
 import es.indra.aerolineas.beans.*;
 import es.indra.aerolineas.beans.impl.Aerolinea;
+import es.indra.aerolineas.beans.impl.Billete;
 import es.indra.aerolineas.beans.impl.Empleado;
 import es.indra.aerolineas.beans.impl.Pasajero;
 import es.indra.aerolineas.beans.impl.Vuelo;
@@ -55,8 +56,23 @@ public class Venta {
 		
 		System.out.println("*************************************************************************");
 		
+		Pasajero p2 = new Pasajero();
+		Pasajero p3= new Pasajero();
+		Pasajero p4= new Pasajero();
+		Pasajero p5= new Pasajero();
+		Billete b1=new Billete(1, vuelos[1], p, "07-11-18", 1);
+		Billete b2=new Billete(2, vuelos[1], p2, "07-11-18", 2);
+		Billete b3=new Billete(3, vuelos[1], p3, "08-11-18", 3);
+		Billete b4=new Billete(4, vuelos[1], p4, "08-11-18", 4);
+		Billete b5=new Billete(5, vuelos[1], p5, "09-11-18", 5);
 		
 		aa.consultarVuelos();
+		aa.getBilletes().put(1, b1);
+		aa.getBilletes().put(2, b2);
+		aa.getBilletes().put(3, b3);
+		aa.getBilletes().put(4, b4);
+		aa.getBilletes().put(5, b5);
+		aa.verBilletesPorFecha("08-11-18");
 		
 		
 
