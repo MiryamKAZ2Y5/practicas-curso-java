@@ -27,8 +27,11 @@ El paquete raíz  es es.indra.aerolinea
  +Métodos:
  
   Constructores: dos constructores, uno vacío y otro con todas las variables.
+  
   Getters y Setters.
+  
   ConsultarVuelo: se puede consultar con el parámetro de origen o el de origen y el de destino.
+  
   AnularVuelo: se puede usar con 0 o n parámetros de tipo Sring.
   
   
