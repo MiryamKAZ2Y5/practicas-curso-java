@@ -3,6 +3,7 @@
  */
 package es.indra.aerolineas.beans;
 
+import java.util.List;
 import java.util.Map;
 
 import es.indra.aerolineas.beans.impl.Billete;
@@ -21,6 +22,6 @@ public interface IAerolinea {
 	public void anularVuelos(String... vuelos);
 	 String getNombre();
 	 Vuelo[] getVuelos();
-	 Map<Integer, Billete> getBilletes();
+	 Map<String, List<Billete>> getBilletes();
 	 public void verBilletesPorFecha(String fecha);
 }

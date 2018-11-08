@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import es.indra.aerolineas.beans.IAerolinea;
 import es.indra.aerolineas.exceptions.ErrorLecturaVuelosException;
@@ -22,7 +23,7 @@ public class Aerolinea implements IAerolinea{
 	private int id;
 	private String nombre;
 	private Vuelo[] vuelos = new Vuelo[10];
-	private Map<Integer,Billete>billetes=new HashMap<>();
+	private Map<String,List <Billete>>billetes=new HashMap<>();
 	
 	public Aerolinea() {		
 	}
@@ -63,12 +64,12 @@ public class Aerolinea implements IAerolinea{
 		this.vuelos = vuelos;
 	}
 	
-	
-	public Map<Integer, Billete> getBilletes() {
+
+	public Map<String, List<Billete>> getBilletes() {
 		return billetes;
 	}
 
-	public void setBilletes(Map<Integer, Billete> billetes) {
+	public void setBilletes(Map<String, List<Billete>> billetes) {
 		this.billetes = billetes;
 	}
 
@@ -120,10 +121,14 @@ public class Aerolinea implements IAerolinea{
 		System.out.println("Numero de vuelos a anular: "+ vuelos.length);
 	}
 	public void verBilletesPorFecha(String fecha) {
-		for(Map.Entry<Integer, Billete> elemento: billetes.entrySet()) {
-			if(elemento.getValue().fecha.equals(fecha)) {
+		for(Entry<String, List<Billete>> elemento: billetes.entrySet()) {
+			
+			if(elemento.getKey().equals(fecha)) {
 				System.out.println("Billete: "+elemento.getKey());
-				System.out.println("Billete: "+elemento.getValue().toString());
+				for(int i=0; i<elemento.getValue().size();i++) {
+					System.out.println("Billete: "+elemento.getValue().toString());
+				}
+				
 			}
 		}
 	}

@@ -18,7 +18,7 @@ import es.indra.aerolineas.exceptions.ErrorLecturaVuelosException;
  */
 public class ReadFile {
 	public List<String> retornarVuelos() throws ErrorLecturaVuelosException {
-		Path path= Paths.get("C:\\Users\\aula6\\repositorios\\practicas-curso-java/vuelos.txt");
+		Path path= Paths.get("C:\\Users\\aula8\\repositorios\\practicas-curso-java/vuelos.txt");
 		List<String> contenido=new ArrayList<String>();
 		try {
 			contenido = Files.readAllLines(path);
