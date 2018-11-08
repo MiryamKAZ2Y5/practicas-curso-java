@@ -9,6 +9,7 @@ package es.indra.aerolineas.beans.impl;
  *
  */
 public class Pasajero extends Persona {
+	private Vuelo[] vuelos;
 	
 	public String getNombre() {
 		return nombre;
@@ -43,7 +44,7 @@ public class Pasajero extends Persona {
 	public void setDni(String dni) {
 		this.dni = dni;
 	}
-	private Vuelo[] vuelos;
+
 
 
 	public Vuelo[] getVuelos() {
